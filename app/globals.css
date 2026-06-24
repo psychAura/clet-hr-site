@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy-950: #080F1E;
+  --color-navy-900: #0F1C33;
+  --color-navy-800: #162A4A;
+  --color-navy-700: #1E3A66;
+  --color-navy-600: #264A80;
+
+  --color-gold-700: #8B6914;
+  --color-gold-600: #A07A15;
+  --color-gold-500: #C5961A;
+  --color-gold-400: #D4A82E;
+  --color-gold-300: #E0BE52;
+  --color-gold-200: #EDD68A;
+  --color-gold-100: #F5E8BE;
+  --color-gold-50: #FBF5E6;
+
+  --color-institutional-bg: #F7F8FA;
+  --color-institutional-border: #E5E7EB;
+  --color-institutional-text: #1A1A2E;
+  --color-institutional-muted: #6B7280;
+
+  --font-heading: var(--font-merriweather);
+  --font-body: var(--font-source-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 17.5px;
+}
+
+body {
+  font-family: var(--font-source-sans), "Source Sans 3", system-ui, -apple-system, sans-serif;
+  color: #1A1A2E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-merriweather), Merriweather, Georgia, "Times New Roman", serif;
+}
+
+::selection {
+  background: #C5961A;
+  color: white;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -42,16 +42,16 @@ export default function Header() {
           scrolled ? "shadow-md" : "shadow-[inset_0_-1px_0_0_#e5e7eb]"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 py-[30px]">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
                 src="/images/clet-ptc-logo.png"
                 alt="CLET People, Talent & Culture"
-                width="128"
-                height="128"
+                width={100}
+                height={100}
                 priority
-                className="w-10 h-10 object-contain"
+                className="w-[100px] h-auto object-contain"
               />
               <div className="hidden sm:block">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold-600 font-semibold leading-none">
@@ -69,7 +69,7 @@ export default function Header() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="relative px-3 py-2 text-[13px] text-navy-600 hover:text-navy-900 transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-gold-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+                      className="relative px-3 py-2 text-[20px] text-navy-600 hover:text-navy-900 transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-gold-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
                     >
                       {item.label}
                     </Link>

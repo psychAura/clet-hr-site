@@ -35,7 +35,7 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center bg-navy-900 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/law-graduate.jpg"
+            src="/images/GSL.png"
             alt=""
             fill
             priority
@@ -44,7 +44,7 @@ export default function Home() {
           />
           <VideoBackground
             src="/videos/hero.mp4"
-            poster="/images/law-graduate.jpg"
+            poster="/images/GSL.png"
             className="absolute inset-0 w-full h-full object-cover opacity-[0.35]"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-navy-950/85 via-navy-900/80 to-navy-900/95" />

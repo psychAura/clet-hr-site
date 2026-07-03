@@ -32,7 +32,7 @@ const FEATURED_ADINKRA = [
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-[85vh] flex items-center bg-navy-900 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-start bg-navy-900 overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/GSL.png"
@@ -55,8 +55,8 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-500/5 rounded-full blur-[200px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
-          <div className="max-w-4xl text-left">
+        <div className="relative w-full max-w-7xl mx-auto px-6 py-24 lg:py-32">
+          <div className="max-w-4xl w-full text-left">
             <div className="flex items-center gap-3 mb-8 justify-start">
               <Image
                 src="/images/clet-ptc-logo.png"

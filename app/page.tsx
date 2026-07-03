@@ -56,8 +56,8 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-8">
+          <div className="max-w-4xl text-left">
+            <div className="flex items-center gap-3 mb-8 justify-start">
               <Image
                 src="/images/clet-ptc-logo.png"
                 alt="CLET People, Talent & Culture"
@@ -89,12 +89,12 @@ export default function Home() {
               define Ghana&apos;s legal education system.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4 justify-start">
               <Link
                 href="/about"
                 className="group inline-flex items-center gap-2 bg-gold-500 text-navy-900 px-7 py-3.5 text-sm font-semibold hover:bg-gold-400 transition-all"
               >
-                Explore Our Work
+                Explore Our Mandate
                 <svg
                   className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
                   fill="none"

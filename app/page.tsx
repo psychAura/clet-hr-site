@@ -79,9 +79,8 @@ export default function Home() {
                   words={["people", "talent", "culture"]}
                   interval={2500}
                 />
-              </span>
-              <br />
-              of legal education
+              </span>{" "}
+              of Legal Education
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl leading-relaxed">

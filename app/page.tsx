@@ -77,7 +77,7 @@ export default function Home() {
               <br />
               <span className="text-gold-400 inline-flex">
                 <AnimatedText
-                  words={["people", "talent", "culture"]}
+                  words={["People", "Talent", "Culture"]}
                   interval={2500}
                 />
               </span>{" "}of
@@ -163,7 +163,7 @@ export default function Home() {
                 Three foundations for institutional excellence.
               </h2>
               <p className="mt-5 text-lg text-institutional-muted leading-relaxed">
-                Every framework, every appointment, and every standard the
+                Every framework, and every standard the
                 Directorate sets traces back to one of these three pillars.
               </p>
             </div>

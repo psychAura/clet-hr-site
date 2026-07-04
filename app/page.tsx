@@ -73,14 +73,16 @@ export default function Home() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tight">
-              Shaping the{" "}
+              Shaping the
+              <br />
               <span className="text-gold-400 inline-flex">
                 <AnimatedText
                   words={["people", "talent", "culture"]}
                   interval={2500}
                 />
-              </span>{" "}
-              of Legal Education
+              </span>{" "}of
+              <br />
+              Legal Education
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl leading-relaxed">

@@ -51,7 +51,7 @@ export default function Header() {
                 width={50}
                 height={50}
                 priority
-                className="w-[100px] h-auto object-contain"
+                className="w-[50px] h-auto object-contain"
               />
               <div className="hidden sm:block">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold-600 font-semibold leading-none">

@@ -42,14 +42,14 @@ export default function Header() {
           scrolled ? "shadow-md" : "shadow-[inset_0_-1px_0_0_#e5e7eb]"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-[30px]">
+        <div className="max-w-7xl mx-auto px-6 py-[15px]">
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <Image
                 src="/images/clet-ptc-logo.png"
                 alt="CLET People, Talent & Culture"
-                width={100}
-                height={100}
+                width={50}
+                height={50}
                 priority
                 className="w-[100px] h-auto object-contain"
               />

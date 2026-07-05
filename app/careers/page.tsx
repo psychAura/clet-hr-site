@@ -268,7 +268,7 @@ export default function CareersPage() {
                 How we grow you
               </p>
               <h2 className="mt-3 text-2xl font-heading font-bold text-navy-900">
-                Four tiers of structured development.
+                Four Tiers Of Structured Development.
               </h2>
               <ul className="mt-8 space-y-4">
                 {tiers.map((t, i) => (
@@ -300,7 +300,7 @@ export default function CareersPage() {
                 Don&apos;t see your role?
               </p>
               <h2 className="mt-3 text-2xl font-heading font-bold text-white">
-                Tell us what you bring.
+                Tell Us What You Bring.
               </h2>
               <p className="mt-3 text-sm text-white/60 leading-relaxed max-w-xl">
                 Qualified professionals may register interest in future

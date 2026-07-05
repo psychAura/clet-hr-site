@@ -160,7 +160,7 @@ export default function Home() {
                 Our Pillars
               </p>
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-navy-900 leading-tight">
-                Three foundations for institutional excellence.
+                Three Foundations For Institutional Excellence.
               </h2>
               <p className="mt-5 text-lg text-institutional-muted leading-relaxed">
                 Every framework, and every standard the
@@ -248,7 +248,7 @@ export default function Home() {
                 Functional Units
               </p>
               <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-navy-900 leading-tight">
-                Two units. One mandate.
+                Two Units. One Mandate.
               </h2>
               <p className="mt-5 text-lg text-institutional-muted leading-relaxed">
                 The Directorate organises its work through two complementary
@@ -317,9 +317,9 @@ export default function Home() {
                       Our Culture
                     </p>
                     <p className="mt-2 text-white text-xl font-heading font-bold">
-                      Excellence in service.
+                      Excellence In Service.
                       <br />
-                      Integrity in practice.
+                      Integrity In Practice.
                     </p>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function Home() {
                 Who We Are
               </p>
               <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900">
-                Building a culture worthy of the legal profession
+                Building A Culture Worthy Of The Legal Profession
               </h2>
               <p className="mt-6 text-institutional-muted leading-relaxed">
                 The culture of Ghana&apos;s legal education system reflects the
@@ -360,7 +360,7 @@ export default function Home() {
                 href="/culture"
                 className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold-600 hover:text-gold-700 transition-colors group"
               >
-                Read our culture statement
+                Read Our Culture Statement
                 <svg
                   className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
                   fill="none"
@@ -396,7 +396,7 @@ export default function Home() {
                 People in Action
               </p>
               <h2 className="mt-4 text-3xl sm:text-4xl font-heading font-bold text-white leading-tight">
-                The talent behind Ghana&apos;s legal education
+                The Talent Behind Ghana&apos;s Legal Education
               </h2>
               <p className="mt-6 text-white/55 leading-relaxed">
                 Behind every standard, every policy, and every framework are the
@@ -477,7 +477,7 @@ export default function Home() {
                 <span className="h-px w-10 bg-gold-500" />
               </div>
               <h2 className="mt-4 text-3xl sm:text-4xl font-heading font-bold text-white">
-                Wisdom woven with the law
+                Wisdom Woven With The Law
               </h2>
               <p className="mt-4 text-white/50 leading-relaxed max-w-2xl mx-auto">
                 The Adinkra symbols of the Akan people carry the proverbs and

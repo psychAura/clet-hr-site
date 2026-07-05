@@ -126,7 +126,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About the Directorate"
-        title="The directorate behind Ghana's legal education workforce."
+        title="The Directorate Behind Ghana's Legal Education Workforce."
         subtitle="A national-level body shaping the human capital, professional standards, and culture of every CLET-regulated institution — drawing authority from statute, owing accountability to the public."
         variant="navy-orbs"
       />
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 About the Directorate
               </p>
               <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900 leading-tight">
-                Custodians of the human capital behind legal education in Ghana.
+                Custodians Of The Human Capital Behind Legal Education In Ghana.
               </h2>
             </Reveal>
             <Reveal delay={0.15} className="lg:col-span-7 space-y-5">
@@ -227,7 +227,7 @@ export default function AboutPage() {
               Statutory Foundation
             </p>
             <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900 max-w-2xl">
-              Authority derived from statute. Accountability owed to the public.
+              Authority Derived From Statute. Accountability Owed To The Public.
             </h2>
           </Reveal>
 
@@ -302,7 +302,7 @@ export default function AboutPage() {
               Mandate of the Directorate
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-heading font-bold text-white max-w-2xl">
-              Nine specific responsibilities granted to the Directorate.
+              Nine Specific Responsibilities Granted To The Directorate.
             </h2>
           </Reveal>
 
@@ -330,7 +330,7 @@ export default function AboutPage() {
               Key Functional Areas
             </p>
             <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900 max-w-2xl">
-              Four interconnected domains of work.
+              Four Interconnected Domains Of Work.
             </h2>
           </Reveal>
 
@@ -361,7 +361,7 @@ export default function AboutPage() {
               Functional Units
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-heading font-bold text-navy-900 max-w-2xl">
-              Two units. One mandate.
+              Two Units. One Mandate.
             </h2>
           </Reveal>
 
@@ -405,7 +405,7 @@ export default function AboutPage() {
                 Regulatory Scope
               </p>
               <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900">
-                Institutions within our jurisdiction
+                Institutions Within Our Jurisdiction
               </h2>
               <ul className="mt-8 space-y-4">
                 {scope.map((item, i) => (
@@ -426,7 +426,7 @@ export default function AboutPage() {
                 Coordination
               </p>
               <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900">
-                Bodies we work with
+                Bodies We Work With
               </h2>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {partners.map((item, i) => (
@@ -453,7 +453,7 @@ export default function AboutPage() {
                 Governance Principles
               </p>
               <h2 className="mt-3 text-3xl font-heading font-bold text-navy-900 leading-tight">
-                How we govern ourselves.
+                How We Govern Ourselves.
               </h2>
             </Reveal>
             <div className="lg:col-span-8">

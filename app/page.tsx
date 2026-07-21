@@ -298,6 +298,128 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-institutional-bg py-24 sm:py-28 border-t border-institutional-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn>
+            <div className="max-w-3xl">
+              <p className="text-xs uppercase tracking-[0.25em] text-gold-600 font-semibold">
+                Staffing &amp; Organisation
+              </p>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-navy-900 leading-tight">
+                Fields &amp; Streams of Work
+              </h2>
+              <p className="mt-5 text-lg text-institutional-muted leading-relaxed">
+                The full organisational structure at a glance — from broad
+                directorates down to the individual streams where the day-to-day
+                work of legal education is carried out.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-semibold">
+              <span className="text-navy-900">10 Directorates</span>
+              <span className="text-gold-500">&#8250;</span>
+              <span className="text-navy-900">28 Fields</span>
+              <span className="text-gold-500">&#8250;</span>
+              <span className="text-navy-900">85 Streams</span>
+              <span className="text-institutional-muted">=</span>
+              <span className="text-gold-700">123 Functional Entities</span>
+            </div>
+          </FadeIn>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                value: 10,
+                label: "Directorates",
+                caption: "Core & enabling",
+                depth: 1,
+                total: false,
+              },
+              {
+                value: 28,
+                label: "Fields",
+                caption: "Units of work",
+                depth: 2,
+                total: false,
+              },
+              {
+                value: 85,
+                label: "Streams",
+                caption: "Sub-units of work",
+                depth: 3,
+                total: false,
+              },
+              {
+                value: 123,
+                label: "Functional Entities",
+                caption: "Total structure",
+                depth: 4,
+                total: true,
+              },
+            ].map((stat, i) => (
+              <FadeIn key={stat.label} delay={i * 0.1}>
+                <div
+                  className={`group relative h-full rounded-2xl p-8 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                    stat.total
+                      ? "bg-navy-900 border border-navy-800"
+                      : "bg-white border border-institutional-border hover:border-gold-400"
+                  }`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`absolute left-0 top-8 bottom-8 w-[3px] rounded-r-full ${
+                      stat.total ? "bg-gold-400" : "bg-gold-500"
+                    }`}
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="flex items-center gap-1.5 mb-6"
+                  >
+                    {Array.from({ length: 4 }).map((_, d) => (
+                      <span
+                        key={d}
+                        className={`h-1.5 rounded-full transition-colors ${
+                          d < stat.depth
+                            ? stat.total
+                              ? "bg-gold-400 w-6"
+                              : "bg-gold-500 w-6"
+                            : stat.total
+                              ? "bg-white/15 w-3"
+                              : "bg-institutional-border w-3"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <p
+                    className={`text-5xl sm:text-6xl font-heading font-bold tabular-nums leading-none ${
+                      stat.total ? "text-gold-400" : "text-gold-600"
+                    }`}
+                  >
+                    <NumberTicker value={stat.value} />
+                  </p>
+                  <p
+                    className={`mt-4 text-base font-heading font-bold uppercase tracking-wide ${
+                      stat.total ? "text-white" : "text-navy-900"
+                    }`}
+                  >
+                    {stat.label}
+                  </p>
+                  <p
+                    className={`mt-1 text-sm italic ${
+                      stat.total ? "text-white/50" : "text-institutional-muted"
+                    }`}
+                  >
+                    {stat.caption}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

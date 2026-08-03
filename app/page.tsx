@@ -82,7 +82,7 @@ export default function Home() {
                 />
               </span>{" "}of
               <br />
-              Legal Education
+              Legal Education in Ghana.
             </h1>
 
             <p className="mt-8 text-lg sm:text-xl text-white/50 max-w-2xl leading-relaxed">

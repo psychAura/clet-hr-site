@@ -6,12 +6,11 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/culture", label: "Culture" },
-  { href: "/careers", label: "Careers" },
-  { href: "/news", label: "News" },
-  { href: "/contact", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#leadership", label: "Leadership" },
+  { href: "#units", label: "Units" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -44,7 +43,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 py-[15px]">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-3 shrink-0">
+            <Link href="#home" className="flex items-center gap-3 shrink-0">
               <Image
                 src="/images/clet-ptc-logo.png"
                 alt="CLET People, Talent & Culture"
@@ -69,7 +68,7 @@ export default function Header() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="relative px-3 py-2 text-[20px] text-navy-600 hover:text-navy-900 transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-gold-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+                      className="relative px-3 py-2 text-base text-navy-600 hover:text-navy-900 transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-gold-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
                     >
                       {item.label}
                     </Link>

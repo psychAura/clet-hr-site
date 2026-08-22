@@ -2,11 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const quickLinks = [
-  { href: "/about", label: "About the Directorate" },
-  { href: "/culture", label: "Culture, Talent & Values" },
-  { href: "/careers", label: "Careers" },
-  { href: "/news", label: "News & Publications" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about", label: "About" },
+  { href: "#leadership", label: "Leadership" },
+  { href: "#units", label: "Our Units" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -62,24 +61,17 @@ export default function Footer() {
             </h3>
             <address className="not-italic text-sm text-white/50 space-y-2.5">
               <p>Council for Legal Education and Training</p>
-              <p>Accra, Ghana</p>
+              <p>P.O. Box 179, Makola, Accra</p>
               <div className="pt-2 space-y-1.5">
                 <p>
                   <a
-                    href="mailto:ptc@clet.gov.gh"
+                    href="tel:0308048091"
                     className="hover:text-white transition-colors"
                   >
-                    ptc@clet.gov.gh
+                    030 804 8091
                   </a>
                 </p>
-                <p>
-                  <a
-                    href="tel:+233302000000"
-                    className="hover:text-white transition-colors"
-                  >
-                    +233 (0) 302 000 000
-                  </a>
-                </p>
+                <p>Monday–Friday, 8:00 am–4:00 pm</p>
               </div>
             </address>
           </div>

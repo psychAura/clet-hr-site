@@ -64,21 +64,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gold-50 py-16 sm:py-20 border-y border-gold-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn><div className="text-center max-w-3xl mx-auto"><p className="eyebrow">Symbols of Our Foundation</p><h2 className="section-title">Ghanaian wisdom in our work.</h2><p className="mt-4 text-institutional-muted leading-relaxed">Adinkra symbols connect the Directorate&apos;s work to enduring ideas of leadership, justice, wisdom and shared responsibility.</p></div></FadeIn>
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-5">{adinkra.map(({ Icon, name, meaning }, index) => <FadeIn key={name} delay={index * 0.04}><div className="text-center"><div className="aspect-square rounded-xl bg-white border border-gold-100 flex items-center justify-center p-5"><Icon className="w-full h-full object-contain" /></div><h3 className="mt-3 text-sm font-heading font-bold text-navy-900">{name}</h3><p className="mt-1 text-xs text-institutional-muted">{meaning}</p></div></FadeIn>)}</div>
-        </div>
-        <KenteStrip className="w-full h-2 mt-16" />
-      </section>
-
-      <section id="work" className="scroll-mt-28 bg-navy-950 py-20 sm:py-28 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn><p className="text-gold-400 text-xs uppercase tracking-[0.25em] font-semibold">What We Do</p><h2 className="mt-4 text-3xl sm:text-5xl font-heading font-bold max-w-3xl">Supporting people throughout their working journey.</h2></FadeIn>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">{responsibilities.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.08}><article className="h-full rounded-xl border border-white/10 bg-white/[0.04] p-7"><Icon className="w-7 h-7 text-gold-400" strokeWidth={1.5} /><h3 className="mt-6 text-xl font-heading font-bold">{title}</h3><p className="mt-3 text-sm text-white/60 leading-relaxed">{body}</p></article></FadeIn>)}</div>
-        </div>
-      </section>
-
       <section id="about" className="scroll-mt-28 bg-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-20 items-start">
           <FadeIn><p className="eyebrow">About the Directorate</p><h2 className="section-title">People at the heart of legal education.</h2></FadeIn>
@@ -92,12 +77,17 @@ export default function Home() {
           <FadeIn delay={0.1}>
             <p className="eyebrow">Leadership</p><h2 className="section-title">A welcome from the Directorate Head</h2>
             <div className="mt-7 text-lg text-institutional-muted leading-relaxed space-y-5"><p>Welcome to the People, Talent &amp; Culture Directorate. Our people are central to the strength and future of legal education in Ghana.</p><p>We are committed to creating a supportive, professional environment where talent is developed, collaboration is encouraged and every member of staff can contribute meaningfully to our shared work.</p></div>
-            <div className="mt-8 border-l-2 border-gold-500 pl-5"><p className="font-heading font-bold text-navy-900">Directorate Head</p><p className="text-sm text-institutional-muted">People, Talent &amp; Culture Directorate</p></div>
+            <div className="mt-10 max-w-sm pt-5 border-t border-navy-900/20"><p className="text-xs uppercase tracking-[0.2em] text-gold-700 font-semibold">With warm regards</p><p className="mt-4 font-heading text-xl font-bold text-navy-900">Directorate Head</p><p className="mt-1 text-sm text-institutional-muted">People, Talent &amp; Culture Directorate</p><p className="mt-3 text-xs uppercase tracking-wider text-navy-700">Council for Legal Education and Training</p></div>
           </FadeIn>
         </div>
       </section>
 
-      <ImageBand src="/images/library.jpg" alt="A legal education library" caption="A culture of learning, service and professional excellence." height="md" />
+      <section id="work" className="scroll-mt-28 bg-navy-950 py-20 sm:py-28 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><p className="text-gold-400 text-xs uppercase tracking-[0.25em] font-semibold">What We Do</p><h2 className="mt-4 text-3xl sm:text-5xl font-heading font-bold max-w-3xl">Supporting people throughout their working journey.</h2></FadeIn>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">{responsibilities.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.08}><article className="h-full rounded-xl border border-white/10 bg-white/[0.04] p-7"><Icon className="w-7 h-7 text-gold-400" strokeWidth={1.5} /><h3 className="mt-6 text-xl font-heading font-bold">{title}</h3><p className="mt-3 text-sm text-white/60 leading-relaxed">{body}</p></article></FadeIn>)}</div>
+        </div>
+      </section>
 
       <section id="units" className="scroll-mt-28 bg-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
@@ -105,6 +95,16 @@ export default function Home() {
           <div className="mt-12 grid md:grid-cols-2 gap-6">{units.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.1}><article className="h-full rounded-2xl border border-institutional-border p-8 sm:p-10 hover:border-gold-400 hover:shadow-lg transition-all"><div className="w-14 h-14 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center"><Icon className="w-7 h-7" strokeWidth={1.5} /></div><h3 className="mt-7 text-2xl font-heading font-bold text-navy-900">{title}</h3><p className="mt-4 text-institutional-muted leading-relaxed">{body}</p></article></FadeIn>)}</div>
         </div>
       </section>
+
+      <section className="bg-gold-50 py-16 sm:py-20 border-y border-gold-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><div className="text-center max-w-3xl mx-auto"><p className="eyebrow">Symbols of Our Foundation</p><h2 className="section-title">Ghanaian wisdom in our work.</h2><p className="mt-4 text-institutional-muted leading-relaxed">Adinkra symbols connect the Directorate&apos;s work to enduring ideas of leadership, justice, wisdom and shared responsibility.</p></div></FadeIn>
+          <div className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-x-3 gap-y-7 sm:gap-5">{adinkra.map(({ Icon, name, meaning }, index) => <FadeIn key={name} delay={index * 0.04}><div className="text-center min-w-0"><div className="aspect-square rounded-xl bg-white border border-gold-100 flex items-center justify-center p-4 sm:p-5"><Icon className="w-full h-full object-contain" /></div><h3 className="mt-3 text-xs sm:text-sm font-heading font-bold text-navy-900 break-words">{name}</h3><p className="mt-1 text-[11px] sm:text-xs leading-snug text-institutional-muted">{meaning}</p></div></FadeIn>)}</div>
+        </div>
+        <KenteStrip className="w-full h-2 mt-16" />
+      </section>
+
+      <ImageBand src="/images/library.jpg" alt="A legal education library" caption="A culture of learning, service and professional excellence." height="md" />
 
       <section id="culture" className="scroll-mt-28 bg-institutional-bg py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
@@ -120,6 +120,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="events" className="scroll-mt-28 bg-navy-950 py-20 sm:py-28 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><p className="text-gold-400 text-xs uppercase tracking-[0.25em] font-semibold">Directorate Events</p><h2 className="mt-4 text-3xl sm:text-5xl font-heading font-bold">Learning, connection and shared progress.</h2><p className="mt-5 max-w-2xl text-white/60 text-lg leading-relaxed">Highlights from staff development, stakeholder engagement and institutional activities.</p></FadeIn>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {[
+              { image: "/images/library.jpg", title: "Professional Development Workshop", type: "Staff Learning", body: "A practical learning session focused on strengthening capability across the workforce." },
+              { image: "/images/law-graduate.jpg", title: "Talent & Leadership Forum", type: "Leadership", body: "Colleagues exchange ideas on leadership, talent development and institutional culture." },
+              { image: "/images/GSL.png", title: "Directorate Stakeholder Session", type: "Engagement", body: "A collaborative session supporting stronger relationships across legal education." },
+            ].map((event, index) => <FadeIn key={event.title} delay={index * 0.08}><article className="group h-full overflow-hidden rounded-2xl bg-white text-navy-900"><div className="relative aspect-[4/3] overflow-hidden"><Image src={event.image} alt="Placeholder for directorate event" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" /><span className="absolute left-4 top-4 rounded-full bg-navy-950/85 px-3 py-1.5 text-[10px] uppercase tracking-widest text-white backdrop-blur-sm">Photo placeholder</span></div><div className="p-6"><p className="text-xs uppercase tracking-[0.18em] text-gold-700 font-semibold">{event.type}</p><h3 className="mt-3 text-xl font-heading font-bold">{event.title}</h3><p className="mt-3 text-sm text-institutional-muted leading-relaxed">{event.body}</p></div></article></FadeIn>)}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-institutional-bg py-20 sm:py-24 border-t border-institutional-border">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn><p className="eyebrow">News &amp; Announcements</p><h2 className="section-title">From the Directorate.</h2></FadeIn>
@@ -128,7 +141,7 @@ export default function Home() {
               { date: "5 June 2026", title: "Directorate Website Launched", body: "The Directorate opens a central point for information on its work and institutional updates." },
               { date: "1 June 2026", title: "Capacity Development Framework", body: "Work continues on a coordinated framework for the professional development of personnel." },
               { date: "28 May 2026", title: "Recruitment Standards Consultation", body: "Stakeholder engagement supports clear and merit-based recruitment practice." },
-            ].map((item, index) => <FadeIn key={item.title} delay={index * 0.08}><article className="h-full bg-white rounded-xl border border-institutional-border border-l-4 border-l-gold-500 p-7"><time className="text-xs uppercase tracking-wider text-institutional-muted">{item.date}</time><h3 className="mt-3 text-xl font-heading font-bold text-navy-900">{item.title}</h3><p className="mt-3 text-sm text-institutional-muted leading-relaxed">{item.body}</p></article></FadeIn>)}
+            ].map((item, index) => <FadeIn key={item.title} delay={index * 0.08}><article className="h-full bg-white rounded-xl border border-institutional-border p-7 hover:shadow-md transition-shadow"><time className="text-xs uppercase tracking-wider text-institutional-muted">{item.date}</time><h3 className="mt-3 text-xl font-heading font-bold text-navy-900">{item.title}</h3><p className="mt-3 text-sm text-institutional-muted leading-relaxed">{item.body}</p></article></FadeIn>)}
           </div>
         </div>
       </section>

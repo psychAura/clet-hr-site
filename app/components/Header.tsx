@@ -8,21 +8,40 @@ import { AnimatePresence, motion } from "framer-motion";
 const navItems = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#work", label: "Our Work" },
   { href: "#leadership", label: "Leadership" },
+  { href: "#work", label: "Our Work" },
   { href: "#units", label: "Units" },
   { href: "#culture", label: "Culture" },
+  { href: "#events", label: "Events" },
   { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = navItems
+      .map(({ href }) => document.getElementById(href.slice(1)))
+      .filter((section): section is HTMLElement => Boolean(section));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-25% 0px -60%", threshold: [0, 0.15, 0.4] },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -64,13 +83,14 @@ export default function Header() {
               </div>
             </Link>
 
-            <nav className="hidden lg:block">
+            <nav className="hidden xl:block" aria-label="Primary navigation">
               <ul className="flex items-center gap-0.5">
                 {navItems.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="relative px-3 py-2 text-base text-navy-600 hover:text-navy-900 transition-colors after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-gold-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left"
+                      aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                      className={`relative px-2.5 py-2 text-[15px] transition-colors after:absolute after:bottom-0 after:left-2.5 after:right-2.5 after:h-[2px] after:bg-gold-500 after:transition-transform after:origin-left ${activeSection === item.href.slice(1) ? "text-navy-950 font-semibold after:scale-x-100" : "text-navy-600 hover:text-navy-900 after:scale-x-0 hover:after:scale-x-100"}`}
                     >
                       {item.label}
                     </Link>
@@ -81,8 +101,9 @@ export default function Header() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 -mr-2"
+              className="xl:hidden p-2 -mr-2"
               aria-label="Toggle navigation menu"
+              aria-expanded={mobileOpen}
             >
               <div className="w-5 flex flex-col gap-[5px]">
                 <span
@@ -112,16 +133,17 @@ export default function Header() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="lg:hidden overflow-hidden border-t border-institutional-border"
+              className="xl:hidden overflow-hidden border-t border-institutional-border bg-white"
             >
-              <nav className="max-w-7xl mx-auto px-6 py-3">
-                <ul className="space-y-0.5">
+              <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-3 max-h-[calc(100vh-7rem)] overflow-y-auto" aria-label="Mobile navigation">
+                <ul className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                   {navItems.map((item) => (
                     <li key={item.href}>
                       <Link
                         href={item.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block px-3 py-2.5 text-sm text-navy-700 hover:text-navy-900 hover:bg-gold-50 rounded-md transition-colors"
+                        aria-current={activeSection === item.href.slice(1) ? "location" : undefined}
+                        className={`block px-3 py-3 text-sm rounded-md transition-colors ${activeSection === item.href.slice(1) ? "bg-gold-50 text-navy-950 font-semibold" : "text-navy-700 hover:text-navy-900 hover:bg-institutional-bg"}`}
                       >
                         {item.label}
                       </Link>

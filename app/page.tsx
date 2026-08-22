@@ -1,6 +1,10 @@
 import Image from "next/image";
 import FadeIn from "@/app/components/FadeIn";
-import { BriefcaseBusiness, ChartNoAxesCombined, Mail, MapPin, Phone, Clock } from "lucide-react";
+import AnimatedText from "@/app/components/AnimatedText";
+import VideoBackground from "@/app/components/VideoBackground";
+import ImageBand from "@/app/components/ImageBand";
+import { Adinkrahene, AkomaNtoaso, Epa, Hwemudua, MmaraKrado, Nyansapo, OkodeeMmowere, Sepow, KenteStrip } from "@/app/components/AdinkraSymbols";
+import { BriefcaseBusiness, ChartNoAxesCombined, Mail, MapPin, Phone, Clock, ShieldCheck, Award, Sparkles, HandHeart, ClipboardCheck, Scale, Target, Users, TrendingUp, GraduationCap } from "lucide-react";
 
 export default function Home() {
   const units = [
@@ -13,19 +17,65 @@ export default function Home() {
     { Icon: Clock, label: "Working Hours", value: "Monday–Friday, 8:00 am–4:00 pm" },
     { Icon: Mail, label: "Directorate", value: "People, Talent & Culture" },
   ];
+  const values = [
+    { Icon: ShieldCheck, title: "Integrity", body: "Honesty, transparency and ethical conduct in our work." },
+    { Icon: Award, title: "Merit", body: "Decisions grounded in competence, qualifications and performance." },
+    { Icon: Sparkles, title: "Excellence", body: "Continuous improvement in teaching, administration and service." },
+    { Icon: HandHeart, title: "Service", body: "A commitment to legal education as a public trust." },
+    { Icon: ClipboardCheck, title: "Accountability", body: "Clear expectations, responsible action and fair oversight." },
+    { Icon: Scale, title: "Fairness", body: "Equity, non-discrimination and due process for all." },
+    { Icon: Target, title: "Discipline", body: "Respect for professional standards and institutional rules." },
+    { Icon: Users, title: "Collaboration", body: "Strong partnerships across legal education and the profession." },
+  ];
+  const responsibilities = [
+    { Icon: TrendingUp, title: "Human Capital Strategy", body: "Planning for workforce needs, capability and succession across the institution." },
+    { Icon: BriefcaseBusiness, title: "Talent Management", body: "Supporting recruitment, onboarding, performance and the staff experience." },
+    { Icon: GraduationCap, title: "Capacity Building", body: "Coordinating learning and development that strengthens staff capability." },
+    { Icon: Scale, title: "Culture & Professional Practice", body: "Fostering an ethical, fair and service-focused workplace culture." },
+  ];
+  const adinkra = [
+    { Icon: Adinkrahene, name: "Adinkrahene", meaning: "Greatness & Leadership" },
+    { Icon: MmaraKrado, name: "Mmara Krado", meaning: "Law & Authority" },
+    { Icon: Epa, name: "Epa", meaning: "Law & Justice" },
+    { Icon: Sepow, name: "Sepow", meaning: "Judicial Authority" },
+    { Icon: AkomaNtoaso, name: "Akoma Ntoaso", meaning: "Understanding & Agreement" },
+    { Icon: Hwemudua, name: "Hwemudua", meaning: "Standards & Excellence" },
+    { Icon: Nyansapo, name: "Nyansapo", meaning: "Wisdom & Ingenuity" },
+    { Icon: OkodeeMmowere, name: "Okodee Mmowere", meaning: "Strength & Bravery" },
+  ];
 
   return (
     <>
       <section id="home" className="relative min-h-[78vh] flex items-center overflow-hidden bg-navy-950">
         <Image src="/images/GSL.png" alt="" fill priority sizes="100vw" className="object-cover opacity-30" />
+        <VideoBackground src="/videos/hero.mp4" poster="/images/GSL.png" className="absolute inset-0 w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-900/55" />
         <div className="relative max-w-7xl mx-auto w-full px-6 py-28 sm:py-36">
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold">People, Talent &amp; Culture Directorate</p>
-            <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.08] tracking-tight">Shaping the talent and culture of the workforce of legal education in Ghana.</h1>
+            <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.08] tracking-tight">
+              Shaping the<br />
+              <span className="text-gold-400 inline-flex"><AnimatedText words={["Talent", "Culture"]} interval={2500} /></span>{" "}of the<br />
+              Workforce of Legal Education in Ghana.
+            </h1>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/70 leading-relaxed">Supporting the people who advance quality, integrity and excellence across Ghana&apos;s legal education system.</p>
             <a href="#about" className="mt-9 inline-flex bg-gold-500 text-navy-950 px-7 py-3.5 font-semibold hover:bg-gold-400 transition-colors">Discover our work</a>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-gold-50 py-16 sm:py-20 border-y border-gold-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><div className="text-center max-w-3xl mx-auto"><p className="eyebrow">Symbols of Our Foundation</p><h2 className="section-title">Ghanaian wisdom in our work.</h2><p className="mt-4 text-institutional-muted leading-relaxed">Adinkra symbols connect the Directorate&apos;s work to enduring ideas of leadership, justice, wisdom and shared responsibility.</p></div></FadeIn>
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-5">{adinkra.map(({ Icon, name, meaning }, index) => <FadeIn key={name} delay={index * 0.04}><div className="text-center"><div className="aspect-square rounded-xl bg-white border border-gold-100 flex items-center justify-center p-5"><Icon className="w-full h-full object-contain" /></div><h3 className="mt-3 text-sm font-heading font-bold text-navy-900">{name}</h3><p className="mt-1 text-xs text-institutional-muted">{meaning}</p></div></FadeIn>)}</div>
+        </div>
+        <KenteStrip className="w-full h-2 mt-16" />
+      </section>
+
+      <section id="work" className="scroll-mt-28 bg-navy-950 py-20 sm:py-28 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><p className="text-gold-400 text-xs uppercase tracking-[0.25em] font-semibold">What We Do</p><h2 className="mt-4 text-3xl sm:text-5xl font-heading font-bold max-w-3xl">Supporting people throughout their working journey.</h2></FadeIn>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">{responsibilities.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.08}><article className="h-full rounded-xl border border-white/10 bg-white/[0.04] p-7"><Icon className="w-7 h-7 text-gold-400" strokeWidth={1.5} /><h3 className="mt-6 text-xl font-heading font-bold">{title}</h3><p className="mt-3 text-sm text-white/60 leading-relaxed">{body}</p></article></FadeIn>)}</div>
         </div>
       </section>
 
@@ -47,11 +97,44 @@ export default function Home() {
         </div>
       </section>
 
+      <ImageBand src="/images/library.jpg" alt="A legal education library" caption="A culture of learning, service and professional excellence." height="md" />
+
       <section id="units" className="scroll-mt-28 bg-white py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn><p className="eyebrow">Our Units</p><h2 className="section-title max-w-2xl">Two connected areas of work.</h2></FadeIn>
           <div className="mt-12 grid md:grid-cols-2 gap-6">{units.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.1}><article className="h-full rounded-2xl border border-institutional-border p-8 sm:p-10 hover:border-gold-400 hover:shadow-lg transition-all"><div className="w-14 h-14 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center"><Icon className="w-7 h-7" strokeWidth={1.5} /></div><h3 className="mt-7 text-2xl font-heading font-bold text-navy-900">{title}</h3><p className="mt-4 text-institutional-muted leading-relaxed">{body}</p></article></FadeIn>)}</div>
         </div>
+      </section>
+
+      <section id="culture" className="scroll-mt-28 bg-institutional-bg py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><p className="eyebrow">Our Culture &amp; Values</p><h2 className="section-title max-w-3xl">The qualities that guide how we work.</h2><p className="mt-5 text-lg text-institutional-muted max-w-3xl leading-relaxed">These shared values shape our decisions, relationships and service to Ghana&apos;s legal education system.</p></FadeIn>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">{values.map(({ Icon, title, body }, index) => <FadeIn key={title} delay={index * 0.05}><article className="h-full bg-white border border-institutional-border rounded-xl p-7"><Icon className="w-6 h-6 text-gold-600" strokeWidth={1.6} /><h3 className="mt-5 text-xl font-heading font-bold text-navy-900">{title}</h3><p className="mt-3 text-sm text-institutional-muted leading-relaxed">{body}</p></article></FadeIn>)}</div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <FadeIn direction="left"><div className="relative aspect-[4/3] rounded-2xl overflow-hidden"><Image src="/images/gold-scales.jpg" alt="Scales of justice" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent" /></div></FadeIn>
+          <FadeIn delay={0.1}><p className="eyebrow">Talent &amp; Development</p><h2 className="section-title">Growing capability for lasting impact.</h2><p className="mt-6 text-lg text-institutional-muted leading-relaxed">We support fair recruitment, thoughtful onboarding, continuous professional development and opportunities for staff to grow. By investing in capability, we strengthen the people and institutions responsible for legal education.</p><a href="#contact" className="mt-8 inline-flex border border-navy-900 text-navy-900 px-6 py-3 font-semibold hover:bg-navy-900 hover:text-white transition-colors">Contact the Directorate</a></FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-institutional-bg py-20 sm:py-24 border-t border-institutional-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeIn><p className="eyebrow">News &amp; Announcements</p><h2 className="section-title">From the Directorate.</h2></FadeIn>
+          <div className="mt-10 grid md:grid-cols-3 gap-5">
+            {[
+              { date: "5 June 2026", title: "Directorate Website Launched", body: "The Directorate opens a central point for information on its work and institutional updates." },
+              { date: "1 June 2026", title: "Capacity Development Framework", body: "Work continues on a coordinated framework for the professional development of personnel." },
+              { date: "28 May 2026", title: "Recruitment Standards Consultation", body: "Stakeholder engagement supports clear and merit-based recruitment practice." },
+            ].map((item, index) => <FadeIn key={item.title} delay={index * 0.08}><article className="h-full bg-white rounded-xl border border-institutional-border border-l-4 border-l-gold-500 p-7"><time className="text-xs uppercase tracking-wider text-institutional-muted">{item.date}</time><h3 className="mt-3 text-xl font-heading font-bold text-navy-900">{item.title}</h3><p className="mt-3 text-sm text-institutional-muted leading-relaxed">{item.body}</p></article></FadeIn>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 sm:py-20 text-center">
+        <div className="max-w-4xl mx-auto px-6"><FadeIn><Image src="/images/clet-logo.png" alt="Council for Legal Education and Training" width={160} height={160} className="w-20 h-20 object-contain mx-auto" /><p className="mt-6 text-xs uppercase tracking-[0.25em] text-gold-600 font-semibold">Republic of Ghana</p><h2 className="mt-3 text-2xl sm:text-3xl font-heading font-bold text-navy-900">Council for Legal Education and Training</h2></FadeIn></div>
       </section>
 
       <section id="contact" className="scroll-mt-28 bg-navy-900 py-20 sm:py-24 text-white">

@@ -55,8 +55,8 @@ export default function Home() {
             <p className="text-gold-400 text-xs sm:text-sm uppercase tracking-[0.25em] font-semibold">People, Talent &amp; Culture Directorate</p>
             <h1 className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.08] tracking-tight">
               Shaping the<br />
-              <span className="text-gold-400 inline-flex"><AnimatedText words={["Talent", "Culture"]} interval={2500} /></span>{" "}of the<br />
-              Workforce of Legal Education in Ghana.
+              <span className="text-gold-400 inline-flex"><AnimatedText words={["People", "Talent", "Culture"]} interval={2500} /></span>{" "}<br />
+              of Legal Education in Ghana.
             </h1>
             <p className="mt-7 max-w-2xl text-lg sm:text-xl text-white/70 leading-relaxed">Supporting the people who advance quality, integrity and excellence across Ghana&apos;s legal education system.</p>
             <a href="#about" className="mt-9 inline-flex bg-gold-500 text-navy-950 px-7 py-3.5 font-semibold hover:bg-gold-400 transition-colors">Discover our work</a>
